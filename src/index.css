@@ -6,8 +6,8 @@
 
 @layer base {
 	:root {
-		--color-bg-1: 29 29 29;
-		--color-bg-2: 23 23 23;
+		/* --color-bg-1: 29 29 29;
+		--color-bg-2: 23 23 23; */
 		--color-green: 106 192 62;
 		--color-blue: 0 117 255;
         --text-secondary: 145 145 145;
