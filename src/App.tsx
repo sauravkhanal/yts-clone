@@ -1,10 +1,12 @@
+import NavBar from "./components/NavBar"
+
 function App() {
 
-  return (
-    <>
-      <h1>Hello from app</h1>
-    </>
-  )
+	return (
+		<div className="font-arimo">
+			<NavBar />
+		</div>
+	)
 }
 
 export default App
