@@ -47,7 +47,7 @@ export default function FilmCard({
             </div>
             {/* text */}
             <div className="pl-1">
-                <p className="text-white font-bold hover:text-text2 text-ellipsis"><a href="">{title ?? "Title"}</a></p>
+                <p className="text-white font-bold hover:text-text2 max-w-56 line-clamp-1"><a href="">{title ?? "Title"}</a></p>
                 <p className="text-text2 text-xs ">{year ?? "Year"}</p>
             </div>
         </>
