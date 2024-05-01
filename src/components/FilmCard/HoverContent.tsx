@@ -16,13 +16,13 @@ export default function HoverContent({ rating, genres, url, className }: IHoverC
             transition duration-300 ${className}
             text-white font-bold text-2xl
             flex flex-col items-center justify-center gap-8
-            group
+            group overflow-hidden
             `}>
 
             {/* star icon and rating */}
             <span className="flex flex-col items-center gap-1">
                 <FaStar className="text-accent_green" />
-                <p className="">{rating?.toString() ?? "8.0"} / 10</p>
+                <p className="">{rating?.toString() ?? "*"} / 10</p>
             </span>
 
             {/* display each genre in separate line */}
