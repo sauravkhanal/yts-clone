@@ -16,7 +16,7 @@ export default function HoverContent({ rating, genres, url, className }: IHoverC
             transition duration-300 ${className}
             text-white font-bold text-2xl
             flex flex-col items-center justify-center gap-8
-            group overflow-hidden
+            group overflow-hidden absolute
             `}>
 
             {/* star icon and rating */}

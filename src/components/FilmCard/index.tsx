@@ -31,8 +31,10 @@ export default function FilmCard({
 }: Movie) {
     return (
         <>
-            {/* image */}
-            <div className="border-[5px] border-white rounded-sm w-56 h-80 
+            <div>
+
+                {/* image */}
+                <div className="border-[5px] border-white rounded-sm w-[212.5px] h-[325px] 
                             bg-popcorn bg-cover bg-center
                             transition-colors duration-200
                             hover:border-accent_green
@@ -40,15 +42,19 @@ export default function FilmCard({
                             group
                             relative
                             "
-                            id={id.toString()}
-                            >
-                {background_image ? <img src={background_image} className="min-w-full min-h-full object-cover" /> : ""}
-                <HoverContent />
-            </div>
-            {/* text */}
-            <div className="pl-1">
-                <p className="text-white font-bold hover:text-text2 max-w-56 line-clamp-1"><a href="">{title ?? "Title"}</a></p>
-                <p className="text-text2 text-xs ">{year ?? "Year"}</p>
+                    id={id.toString()}
+                >
+                    {background_image ? <img src={medium_cover_image} className="min-w-full min-h-full object-cover" /> : ""}
+                    <HoverContent genres={genres} rating={rating} url={url} className="absolute top-0" />
+                </div>
+
+
+                {/* text */}
+                <div className="px-1">
+                    <p className="text-white font-bold hover:text-text2 max-w-[212.5px] line-clamp-1 overflow-clip"><a href="">{title ?? "Title"}</a></p>
+                    <p className="text-text2 text-[13.6px] ">{year ?? "Year"}</p>
+                </div>
+
             </div>
         </>
     )
