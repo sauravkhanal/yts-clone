@@ -24,6 +24,9 @@ module.exports = {
         'logoText': '1450px',
         '2xl': '1536px',
       },
+      backgroundImage: {
+        "popcorn": "url('/src/assets/popcorn.avif')"
+      }
     },
 
   },
