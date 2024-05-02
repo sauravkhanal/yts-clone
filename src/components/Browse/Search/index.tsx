@@ -14,7 +14,8 @@ export default function Search({ setQuery }: any) { // set the query params from
                 <input type="text" name="movie" id="move" placeholder=""
                     className="outline-none bg-input_gray w-[880px] h-[40px] pl-3 text-text2 rounded-sm"
                 />
-
+                
+                {/* select options */}
                 <div className="text-text2 text-sm font-semibold gap-y-2.5 pt-5 flex justify-between">
                     <span className="flex flex-col gap-[10px]">
                         <p>Quality:</p>

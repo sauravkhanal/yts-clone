@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getMoviesData } from "../../api";
 import { MovieQuery, Data } from "../../types";
-import MovieCards from "../MovieCards";
+import MovieCards from "../MovieCardBrowse";
 import Search from "./Search";
 
 export default function Browse() {
@@ -22,8 +22,8 @@ export default function Browse() {
         <>
             <Search setQuery={setQuery} />
 
-            <section className="bg-bgColor2 flex flex-col items-center">
-                <MovieCards className="grid grid-cols-4 gap-x-16 gap-y-4 bg-bgColor1" data={data?.movies}/>
+            <section className="bg-bgColor1 flex flex-col items-center">
+                <MovieCards className="grid grid-cols-5 gap-x-16 gap-y-4 bg-bgColor1" data={data?.movies}/>
             </section>
 
             {/* <button onClick={()=>setQuery({limit:5})}>click me</button> */}
