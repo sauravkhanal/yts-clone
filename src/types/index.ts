@@ -70,3 +70,22 @@ export interface Meta {
     api_version: number
     execution_time: string
 }
+
+
+export interface MovieQuery {
+    limit?: number; // Integer between 1 - 50 (inclusive)
+    page?: number; // Integer (Unsigned)
+    quality?: '480p' | '720p' | '1080p' | '1080p.x265' | '2160p' | '3D'; // String (480p, 720p, 1080p, 1080p.x265, 2160p, 3D)
+    minimum_rating?: number; // Integer between 0 - 9 (inclusive)
+    query_term?: string; // String
+    genre?: string; // String
+    sort_by?: 'title' | 'year' | 'rating' | 'peers' | 'seeds' | 'download_count' | 'like_count' | 'date_added'; // String (title, year, rating, peers, seeds, download_count, like_count, date_added)
+    order_by?: 'desc' | 'asc'; // String (desc, asc)
+    with_rt_ratings?: boolean; // Boolean
+}
+
+
+export interface SelectOption {
+    value: string;
+    text: string;
+}
