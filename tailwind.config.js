@@ -12,6 +12,7 @@ module.exports = {
         accent_green: 'rgb(var(--color-green) / <alpha-value>)',
         progress_blue: 'rgb(var(--color-blue) / <alpha-value>)',
         text2: 'rgb(var(--text-secondary) / <alpha-value>)',
+        input_gray: 'rgb(var(--input-gray) / <alpha-value> )'
       },
       fontFamily: {
         'arimo': ["Arimo", "sans-serif"]
