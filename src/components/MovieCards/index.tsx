@@ -1,25 +1,29 @@
-import { useEffect, useState } from "react"
-import { getMoviesData } from "../../api"
-import { Data, IClassName } from "../../types"
+import { Movie } from "../../types"
 import FilmCard from "../FilmCard"
 
-export default  function MovieCards({className}: IClassName) {
-    const [moviesData, setMoviesData] = useState<Data | null>(null);
+interface IMovieCards {
+    data?: Movie[];
+    className?: string;
+}
 
-    useEffect(()=>{
-        async function fetchData () {
-            const data = await getMoviesData();
-            console.log("The received data is ")
-            console.log(data)
-            setMoviesData(data);
-        }
-        fetchData();
-    }, []);
+export default function MovieCards({ data, className }: IMovieCards) {
+    // const [moviesData, setMoviesData] = useState<Movie[]>(data);
+
+
+    // useEffect(()=>{
+    //     async function fetchData () {
+    //         const data = await getMoviesData(query);
+    //         // console.log("The received data is ")
+    //         // console.log(data)
+    //         setMoviesData(data);
+    //     }
+    //     fetchData();
+    // }, []);
 
     return (
         <div className={className}>
             {
-                moviesData?.movies.map((data, index) => <FilmCard  {...data} id={index}/>)
+                data?.map((data, index) => <FilmCard  {...data} id={index} />)
             }
         </div>
     )
