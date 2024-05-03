@@ -89,3 +89,10 @@ export interface SelectOption {
     value: string;
     text: string;
 }
+
+export interface PaginationDetails {
+    movie_count: number;
+    page_number: number;
+    limit: number;
+    setQuery: React.Dispatch<React.SetStateAction<MovieQuery>>;
+}
