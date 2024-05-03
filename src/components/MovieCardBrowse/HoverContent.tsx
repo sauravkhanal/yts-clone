@@ -1,13 +1,22 @@
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 interface IHoverContent {
     rating?: string | Number;
     genres?: string[];
     url?: string;
     className?: string;
+    id:number;
 }
 
-export default function HoverContent({ rating, genres, url, className }: IHoverContent) {
+export default function HoverContent({ rating, genres, url, className,id }: IHoverContent) {
+
+    const navigate = useNavigate();
+
+    function handleClick(movie_id: number) {
+        navigate(`/Details/${movie_id}`)
+    }
+    
     return (
         <div className={`
             w-full h-full bg-black 
@@ -17,7 +26,9 @@ export default function HoverContent({ rating, genres, url, className }: IHoverC
             text-white font-bold text-2xl
             flex flex-col items-center justify-center gap-8
             group overflow-hidden absolute
-            `}>
+            `}
+            onClick={()=>handleClick(id)}
+            >
 
             {/* star icon and rating */}
             <span className="flex flex-col items-center gap-1">
