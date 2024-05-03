@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
-import { Data, MovieDetailRoot, MovieQuery, Root, SuggestionRoot } from "../types";
-import { SData, SRoot } from "../types/SimilarMovies";
+import { Data, MovieDetailRoot, MovieQuery, Root } from "../types";
+import {  SRoot } from "../types/SimilarMovies";
 
 export const getAxios = axios.create({
     baseURL: "https://yts.mx/api/v2"
@@ -36,12 +36,12 @@ export const getMovieDetail = async (id: number): Promise<MovieDetailRoot | unde
 }
 
 
-export const getSimilarMovie = async (movie_id?: string) => {
+export const getSimilarMovie = async (movie_id?: number) => {
     try {
         if (movie_id) {
 
             const response: SRoot = await getAxios.get("/movie_suggestions.json", {
-                params: { movie_id: parseInt(movie_id) }
+                params: { movie_id: movie_id }
             });
             // console.log("Response from getSimilarMovie:", response.data.data);
             return (response.data.data.movies.map((movie, _) => ({ id: movie.id, img: movie.medium_cover_image })))
