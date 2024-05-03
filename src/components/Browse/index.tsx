@@ -24,10 +24,10 @@ export default function Browse() {
         <>
             <Search setQuery={setQuery} />
 
-            <section className="bg-bgColor1 flex flex-col items-center">
-                <p className="text-2xl pt-3 text-accent_green">YIFY Movies - page {data.page_number}</p>
+            <section className="bg-bgColor1 flex flex-col gap-10 items-center py-5">
+                {data.movie_count > 0 && <p className="text-2xl text-accent_green">YIFY Movies - page {data.page_number}</p>}
                 <Pagination page_number={data.page_number} limit={data.limit} movie_count={data.movie_count} setQuery={setQuery} />
-                <MovieCards className="grid grid-cols-5 gap-x-16 gap-y-4 bg-bgColor1" data={data?.movies} />
+                <MovieCards className="grid grid-cols-5 gap-x-16 gap-y-4 bg-bgColor1 my-4" data={data?.movies} />
                 <Pagination page_number={data.page_number} limit={data.limit} movie_count={data.movie_count} setQuery={setQuery} />
             </section>
 
