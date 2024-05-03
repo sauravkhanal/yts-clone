@@ -8,9 +8,9 @@ export const getAxios = axios.create({
 export const getMoviesData = async (query?: MovieQuery):Promise<Data | undefined> => {
     try {
         const response: AxiosResponse<Root> = await getAxios.get("/list_movies.json", {params: query});
-        console.log(query)
-        console.log("The response is: ")
-        console.log(response.data)
+        // console.log(query)
+        // console.log("The response is: ")
+        // console.log(response.data)
         return response.data.data;
         
     } catch (error) {
@@ -18,3 +18,5 @@ export const getMoviesData = async (query?: MovieQuery):Promise<Data | undefined
         return ;
     }
 };
+
+export const getMovieDetail = async (id: number)
