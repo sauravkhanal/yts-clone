@@ -22,8 +22,8 @@ export default function Pagination({ movie_count, limit, page_number, setQuery }
 
     return (
         !isSinglePage && (
-            <div className="flex gap-2 py-10">
-                <Button variant="outline" disabled={page_number === 0} onClick={handlePrevious}>
+            <div className="flex gap-2">
+                <Button variant="outline" disabled={page_number === 1} onClick={handlePrevious}>
                     Prev
                 </Button>
                 {IndexToShow.map(value => (
@@ -37,7 +37,7 @@ export default function Pagination({ movie_count, limit, page_number, setQuery }
                 ))}
                 <Button
                     variant="outline"
-                    disabled={page_number === totalPages - 1}
+                    disabled={page_number === totalPages }
                     onClick={handleNext}
                 >
                     Next
