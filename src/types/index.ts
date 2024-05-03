@@ -162,3 +162,10 @@ interface IdAndImage { id: string, small_cover_image: string }
 export interface SimilarMoviesImage {
     id: number, small_cover_image: string
 }
+
+
+export interface IFilterFields {
+    queryName: string;
+    displayName: string;
+    options: { value: string, displayName: string }[]
+}
