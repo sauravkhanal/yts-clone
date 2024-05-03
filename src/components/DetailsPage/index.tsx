@@ -13,7 +13,7 @@ export default function DetailsPage() {
 	const [details, setDetails] = useState<MovieDetail | undefined>(undefined)
 	const [isModalOpen, setModalOpen] = useState<boolean>(false)
 	const toggleModal = () => {
-		setModalOpen((v)=>!v)
+		setModalOpen((v) => !v)
 	}
 
 	useEffect(() => {
@@ -30,7 +30,7 @@ export default function DetailsPage() {
 
 
 	return (
-		<div className="relative bg-bgColor2" style={{
+		<div className="relative bg-bgColor2 flex flex-col min-h-screen" style={{
 			backgroundImage: `url(${details?.background_image})`,
 			backgroundSize: 'cover',
 			backgroundPosition: 'center',
@@ -41,13 +41,15 @@ export default function DetailsPage() {
 				<ImageBtnContainer large_cover_image={details?.large_cover_image} title={details?.title} />
 				<TextContainer {...details} />
 				<SimilarMovies id={id} />
-				<YoutubeModal video_id={details?.yt_trailer_code} isModalOpen={isModalOpen} toggleModal={toggleModal}/>
-				<Screenshots/>
+				<YoutubeModal video_id={details?.yt_trailer_code} isModalOpen={isModalOpen} toggleModal={toggleModal} />
 			</div>
+			<Screenshots
+				ss1={details?.medium_screenshot_image1}
+				ss2={details?.medium_screenshot_image2}
+				ss3={details?.medium_screenshot_image3}
+				onClick={toggleModal} />
 		</div>
 	);
-
-
-
+	23
 
 }
