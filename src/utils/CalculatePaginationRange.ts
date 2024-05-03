@@ -1,3 +1,12 @@
+/**
+ * calculate pagination indexes for a give current page, total pages and range.
+ * Assumes index starts from 1.
+ * @param currentPage: current page number, we paginate left or right from it
+ * @param totalPages total number of possible pages
+ * @param maxPagesToShow total number of indices to show
+ * @param range number of items to show on left and right. (Default 3)
+ * @returns Array of numbers representing the pagination indexes.
+ */
 export default function calculatePaginationRange(currentPage: number, totalPages: number, range: number = 3, maxPagesToShow: number = 7): number[] {
     let start = Math.max(1, currentPage - range);
     let end = Math.min(totalPages, currentPage + range);
