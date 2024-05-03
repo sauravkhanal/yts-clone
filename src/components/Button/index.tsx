@@ -19,7 +19,7 @@ export default function Button({ variant, url, className, children, onClick, ...
                 <button
                     className={`rounded-[.18rem] bg-transparent font-bold text-base text-white hover:bg-accent_green transition border border-text2 border-opacity-20 px-3 py-1  
                     disabled:opacity-50 disabled:hover:bg-transparent
-                    active:scale-110
+                    active:scale-90
                     ${className} `}
                     {...rest}
                     onClick={onClick}
@@ -31,7 +31,7 @@ export default function Button({ variant, url, className, children, onClick, ...
                 <button
                     className={`rounded-[.18rem] bg-accent_green px-4 py-[6px] font-bold text-base text-white hover:opacity-80 transition  
                     disabled:opacity-50 disabled:hover:bg-transparent
-                    active:scale-110
+                    active:scale-90
                     ${className}`}
                     {...rest}
                     onClick={onClick}
