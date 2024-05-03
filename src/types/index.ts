@@ -139,3 +139,26 @@ export interface MovieDetail {
     date_uploaded: string
     date_uploaded_unix: number
 }
+
+interface IMovies {
+    movie: MovieDetail
+}
+
+export interface MovieDetailRoot extends Omit<Root, 'data'> {
+    data: IMovies
+}
+
+export interface MovieSuggestionData {
+    movie_count: number
+    movies: Movie[]
+}
+
+export interface SuggestionRoot extends Omit<Root, 'data'> {
+    data: MovieSuggestionData
+}
+
+interface IdAndImage { id: string, small_cover_image: string }
+
+export interface SimilarMoviesImage {
+    id: number, small_cover_image: string
+}
