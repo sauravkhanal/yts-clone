@@ -3,10 +3,12 @@ import { IClassName } from "../../types";
 interface IButton extends IClassName {
     url?: string;
     children?: React.ReactNode;
-    variant?: "outline"
+    variant?: "outline";
+    // disabled?: "boolean";
+    [key: string]: any;
 }
 
-export default function Button({ variant, url, className, children }: IButton) {
+export default function Button({ variant, url, className, children, ...rest }: IButton) {
 
     // const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>)=> {
     //     event.preventDefault()
@@ -21,13 +23,19 @@ export default function Button({ variant, url, className, children }: IButton) {
         {
             variant === "outline" ?
                 <button
-                    className={`rounded-[.18rem] bg-transparent font-bold text-base text-white hover:bg-accent_green transition border border-text2 px-3 py-1  ${className}`}
+                    className={`rounded-[.18rem] bg-transparent font-bold text-base text-white hover:bg-accent_green transition border border-text2 px-3 py-1  
+                    disabled:opacity-50 disabled:hover:bg-transparent
+                    ${className} `}
+                    {...rest}
                 >
                     <a href={url}>{children}</a>
                 </button>
                 :
                 <button
-                    className={`rounded-[.18rem] bg-accent_green px-4 py-[6px] font-bold text-base text-white hover:opacity-80 transition  ${className}`}
+                    className={`rounded-[.18rem] bg-accent_green px-4 py-[6px] font-bold text-base text-white hover:opacity-80 transition  
+                    disabled:opacity-50 disabled:hover:bg-transparent
+                    ${className}`}
+                    {...rest}
                 >
                     <a href={url}>{children}</a>
                 </button>
