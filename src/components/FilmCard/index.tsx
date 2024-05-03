@@ -69,7 +69,7 @@ export default function FilmCard({
                 >
 
                     {background_image ? <img src={medium_cover_image} className="min-w-full min-h-full object-cover" /> : ""}
-                    <HoverContent genres={genres} rating={rating} url={url} className="absolute top-0" />
+                    <HoverContent genres={genres} rating={rating} url={url} id={id} className="absolute top-0" />
                     {torrentQuality ? <img src={`src/assets/banner${torrentQuality}.webp`} alt={torrentQuality} className="absolute top-0" /> : ""}
                     
                 </div>

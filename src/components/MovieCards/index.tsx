@@ -23,7 +23,7 @@ export default function MovieCards({ data, className }: IMovieCards) {
     return (
         <div className={className}>
             {
-                data?.map((data, index) => <FilmCard  {...data} id={index} />)
+                data?.map((data, index) => <FilmCard  {...data} key={index} />)
             }
         </div>
     )
