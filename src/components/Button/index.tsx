@@ -17,7 +17,7 @@ export default function Button({ variant, url, className, children, onClick, ...
         {
             variant === "outline" ?
                 <button
-                    className={`rounded-[.18rem] bg-transparent font-bold text-base text-white hover:bg-accent_green transition border border-text2 px-3 py-1  
+                    className={`rounded-[.18rem] bg-transparent font-bold text-base text-white hover:bg-accent_green transition border border-text2 border-opacity-20 px-3 py-1  
                     disabled:opacity-50 disabled:hover:bg-transparent
                     active:scale-110
                     ${className} `}
