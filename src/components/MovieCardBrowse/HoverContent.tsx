@@ -14,7 +14,7 @@ export default function HoverContent({ rating, genres, url, className,id }: IHov
     const navigate = useNavigate();
 
     function handleClick(movie_id: number) {
-        navigate(`/Details/${movie_id}`)
+        navigate(`/details/${movie_id}`)
     }
     
     return (
