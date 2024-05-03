@@ -1,4 +1,5 @@
 import { Movie, Torrent } from "../../types";
+import determineMaxQuality from "../../utils/determineMaxQuality";
 import HoverContent from "./HoverContent";
 
 export default function FilmCard({
@@ -30,23 +31,6 @@ export default function FilmCard({
     date_uploaded_unix,
 }: Movie) {
 
-    function determineMaxQuality(torrents: Torrent[]):string | null {
-        if (torrents.length === 0) {
-            return null;
-        }
-    
-        const qualitiesOrder = ['720p', '1080p', '2160p'];
-        let maxQualityIndex = qualitiesOrder.indexOf(torrents[0].quality);
-    
-        for (const torrent of torrents) {
-            const qualityIndex = qualitiesOrder.indexOf(torrent.quality);
-            if (qualityIndex > maxQualityIndex) {
-                maxQualityIndex = qualityIndex;
-            }
-        }
-    
-        return qualitiesOrder[maxQualityIndex];
-    }
     
     const torrentQuality = determineMaxQuality(torrents)
     
