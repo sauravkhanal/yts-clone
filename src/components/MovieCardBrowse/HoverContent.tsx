@@ -38,7 +38,7 @@ export default function HoverContent({ rating, genres, url, className,id }: IHov
 
             {/* display each genre in separate line */}
             <div className="flex flex-col items-center">
-                {(genres ?? ["Genre"]).map(
+                {(genres ?? ["Genre"]).slice(0,2).map(
                     (word, index) => <p key={index}>{word}</p>
                 )}
             </div>
