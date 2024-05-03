@@ -34,7 +34,7 @@ export default function SimilarMovies({ id, className }: Iid) {
                 {
                     similarMovies?.map((value, _) => <img
                         src={value.img}
-                        id={value.id}
+                        id={value.id.toString()}
                         className="border-4 border-white hover:border-accent_green rounded-sm transition w-28" 
                         onClick={()=> handleClick(value.id)}
                         />)

@@ -1,4 +1,4 @@
-import axios, {  AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 import { Data, MovieDetailRoot, MovieQuery, Root, SuggestionRoot } from "../types";
 import { SData, SRoot } from "../types/SimilarMovies";
 
@@ -36,13 +36,16 @@ export const getMovieDetail = async (id: number): Promise<MovieDetailRoot | unde
 }
 
 
-export const getSimilarMovie = async (movie_id: string) => {
+export const getSimilarMovie = async (movie_id?: string) => {
     try {
-        const response:SRoot = await getAxios.get("/movie_suggestions.json", {
-            params: { movie_id: parseInt(movie_id) }
-        });
-        // console.log("Response from getSimilarMovie:", response.data.data);
-        return (response.data.data.movies.map((movie,_)=>({id: movie.id, img:movie.medium_cover_image})))
+        if (movie_id) {
+
+            const response: SRoot = await getAxios.get("/movie_suggestions.json", {
+                params: { movie_id: parseInt(movie_id) }
+            });
+            // console.log("Response from getSimilarMovie:", response.data.data);
+            return (response.data.data.movies.map((movie, _) => ({ id: movie.id, img: movie.medium_cover_image })))
+        }
     } catch (error) {
         console.error("3. Error fetching similar movies", error);
         return;
