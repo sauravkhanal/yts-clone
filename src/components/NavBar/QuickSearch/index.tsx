@@ -20,7 +20,7 @@ const QuickSearchBox: React.FC = () => {
         const response = await getMoviesData({ query_term: queryParam })
         if (response?.movie_count ?? 0 > 0) {
             console.log(response?.movies)
-            setMovies(response?.movies.slice(0,5))
+            setMovies(response?.movies.slice(0, 5))
             setQuickSearchResultShown(true);
         }
         setLoading(false);
@@ -45,8 +45,8 @@ const QuickSearchBox: React.FC = () => {
     return (
         <div className="hidden lg:flex rounded-full border-2 border-text2/40 text-text2 px-2 py-1 h-9 w-64 relative"
             ref={inputRef}
-            onFocus={()=>setQuickSearchResultShown(true)}
-            onBlur={()=>setTimeout(()=>{setQuickSearchResultShown(false)},500)}
+            onFocus={() => setQuickSearchResultShown(true)}
+            onBlur={() => setTimeout(() => { setQuickSearchResultShown(false) }, 300)}
         >
             <div className="w-6 flex items-center">
                 <FaSearch />
@@ -62,11 +62,14 @@ const QuickSearchBox: React.FC = () => {
             {loading && <div className="w-6 b-6 ">
                 <LoadingSVG />
             </div>}
-            {quickSearchResultShown && <QuickSearchResult details={movies} className=" absolute top-12" />}
+            {/* {quickSearchResultShown && <QuickSearchResult details={movies} className=" absolute top-12" />}
+             */}
+
+            <div className={`${(quickSearchResultShown && (movies?.length ?? 0 > 1)) ? "h-[505px]" : "h-0"} transition-all duration-250 ease-linear overflow-hidden absolute top-12`}>
+                <QuickSearchResult details={movies} />
+            </div>
         </div>
     );
 }
 
 export default QuickSearchBox;
-
-

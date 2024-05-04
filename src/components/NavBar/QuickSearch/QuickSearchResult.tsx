@@ -17,7 +17,7 @@ export default function QuickSearchResult({ details, className }: { details?: Mo
             >
                 <img src={detail.medium_cover_image} alt="cover image" className="h-16" />
                 <div className="flex flex-col gap-3">
-                    <p className="text-white font-semibold text-[16px]">{detail.title.slice(0, 35)}</p>
+                    <p className="text-white font-semibold text-sm">{detail.title.slice(0, 35)}</p>
                     <p className="text-text2 text-xs">{detail.year}</p>
                 </div>
             </div>
