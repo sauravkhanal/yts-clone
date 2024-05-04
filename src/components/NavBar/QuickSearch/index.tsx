@@ -46,7 +46,7 @@ const QuickSearchBox: React.FC = () => {
         <div className="hidden lg:flex rounded-full border-2 border-text2/40 text-text2 px-2 py-1 h-9 w-64 relative"
             ref={inputRef}
             onFocus={()=>setQuickSearchResultShown(true)}
-            onBlur={()=>setTimeout(()=>{setQuickSearchResultShown(false)},200)}
+            onBlur={()=>setTimeout(()=>{setQuickSearchResultShown(false)},500)}
         >
             <div className="w-6 flex items-center">
                 <FaSearch />
