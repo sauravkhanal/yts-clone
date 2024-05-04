@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom";
 interface IHoverContent {
     rating?: string | Number;
     genres?: string[];
-    url?: string;
     className?: string;
     id:number;
 }
 
-export default function HoverContent({ rating, genres, url, className,id }: IHoverContent) {
+export default function HoverContent({ rating, genres, className,id }: IHoverContent) {
 
     const navigate = useNavigate();
 
@@ -43,7 +42,7 @@ export default function HoverContent({ rating, genres, url, className,id }: IHov
                 )}
             </div>
 
-            <button className="rounded-[.18rem] bg-accent_green h-9 w-32 font-bold text-base relative -bottom-14 group-hover:bottom-0 transition-all duration-300"><a href={url}>View Details</a></button>
+            <button className="rounded-[.18rem] bg-accent_green h-9 w-32 font-bold text-base relative -bottom-14 group-hover:bottom-0 transition-all duration-300"><a href={`/details/${id}`}>View Details</a></button>
         </div>
     )
 }

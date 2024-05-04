@@ -9,14 +9,16 @@ interface IHoverContent {
     className?: string;
 }
 
-export default function HoverContent({ rating, genres, url, id, className }: IHoverContent) {
+export default function HoverContent({ rating, genres , className,id }: IHoverContent) {
+
     const navigate = useNavigate();
 
     function handleClick(movie_id: number) {
         navigate(`/details/${movie_id}`)
     }
+    
     return (
-        <div className={`
+        <a className={`
             w-full h-full bg-black 
             opacity-0 bg-opacity-0 
             hover:bg-opacity-70 hover:opacity-100 
@@ -36,12 +38,12 @@ export default function HoverContent({ rating, genres, url, id, className }: IHo
 
             {/* display each genre in separate line */}
             <div className="flex flex-col items-center">
-                {(genres ?? ["Genre"]).map(
+                {(genres ?? ["Genre"]).slice(0,2).map(
                     (word, index) => <p key={index}>{word}</p>
                 )}
             </div>
 
-            <button className="rounded-[.18rem] bg-accent_green h-9 w-32 font-bold text-base relative -bottom-14 group-hover:bottom-0 transition-all duration-300"><a href={url}>View Details</a></button>
-        </div>
+            <button className="rounded-[.18rem] bg-accent_green h-9 w-32 font-bold text-base relative -bottom-14 group-hover:bottom-0 transition-all duration-300">View Details</button>
+        </a>
     )
 }
