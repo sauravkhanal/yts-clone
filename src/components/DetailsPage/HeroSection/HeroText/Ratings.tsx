@@ -11,8 +11,8 @@ export default function Ratings() {
     return (
         <div className="flex">
 
-            <div className="grid grid-cols-3 grid-rows-4 space-y-2 space-x-4 ">
-                <IoMdHeart className="text-accent_green w-6 h-6 ml-4 self-center relative top-2" />
+            <div className="grid grid-cols-3 grid-rows-4 space-y-2  items-start">
+                <IoMdHeart className="text-accent_green w-6 h-6  self-center relative top-2" />
 
                 <Text primary={details?.like_count} />
 
