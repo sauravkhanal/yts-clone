@@ -37,5 +37,5 @@ export default function Ratings() {
 }
 
 function Text({ primary, secondary }: { primary?: string | number, secondary?: string | React.ReactNode }) {
-    return <p className="text-white font-bold text-xl col-span-2">{primary} <span className="text-text2 text-sm font-normal">{secondary}</span></p>
+    return <p className="text-text1 font-bold text-xl col-span-2">{primary} <span className="text-text2 text-sm font-normal">{secondary}</span></p>
 }

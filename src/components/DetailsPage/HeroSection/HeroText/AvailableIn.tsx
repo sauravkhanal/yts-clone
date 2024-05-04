@@ -6,7 +6,7 @@ export default function AvailableIn() {
 	const details = useContext(DetailsContext)
 	return (
 		<div className="flex flex-wrap gap-x-2 gap-y-1">
-			<div className="italic text-white text-xl">Available in:</div>
+			<div className="italic text-text1 text-xl">Available in:</div>
 			{
 				details?.torrents.map((torrent, index) => (
 					<div key={index} >

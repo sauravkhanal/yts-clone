@@ -23,7 +23,7 @@ export default function HoverContent({ rating, genres , className,id }: IHoverCo
             opacity-0 bg-opacity-0 
             hover:bg-opacity-70 hover:opacity-100 
             transition duration-300 ${className}
-            text-white font-bold text-2xl
+            text-text1 font-bold text-2xl
             flex flex-col items-center justify-center gap-8
             group overflow-hidden absolute
             `}

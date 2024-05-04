@@ -15,7 +15,7 @@ export default function Home() {
 
             // <section className="bg-bgColor2 flex flex-col items-center">
             //     <span className="flex justify-between w-4/5 py-10">
-            //         <p className=" font-bold text-white  ">Latest YIFY Movies Torrents</p>
+            //         <p className=" font-bold text-text1  ">Latest YIFY Movies Torrents</p>
             //         <Link to="/browse-movies" className="text-text2">Browse all</Link>
             //     </span>
             //     {/* latest movies */}

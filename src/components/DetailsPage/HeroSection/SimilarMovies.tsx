@@ -27,7 +27,7 @@ export default function SimilarMovies({ className }: IClassName) {
 
     return (
         <div className={`flex flex-col w-[248px] ${className} `}>
-            <p className="text-white font-bold pb-1 shadow-text2 ">Similar Movies</p>
+            <p className="text-text1 font-bold pb-1 shadow-text2 ">Similar Movies</p>
             <div className=" flex flex-col justify-center items-center">
                 <div className="grid grid-cols-2 gap-5">
                     {
@@ -36,7 +36,7 @@ export default function SimilarMovies({ className }: IClassName) {
                                 <img
                                     src={value.img}
                                     key={value.id.toString()}
-                                    className="border-4 border-white hover:border-accent_green rounded-sm transition w-28"
+                                    className="border-4 border-text1 hover:border-accent_green rounded-sm transition w-28"
                                     onClick={() => handleClick(value.id)}
                                 />
                             </Link>

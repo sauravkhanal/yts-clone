@@ -5,8 +5,8 @@ export default function YearGenre() {
     const details = useContext(DetailsContext)
     return (
         <div >
-            <p className="text-xl text-white font-bold ">{details?.year}</p>
-            <span className="text-white flex gap-2 flex-wrap text-xl font-bold">
+            <p className="text-xl text-text1 font-bold ">{details?.year}</p>
+            <span className="text-text1 flex gap-2 flex-wrap text-xl font-bold">
                 {
                     // workaround to show / after every element except last, use selector later
                     //TODO: use css selector to show "/"

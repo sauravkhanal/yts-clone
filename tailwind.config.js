@@ -11,6 +11,7 @@ module.exports = {
         bgColor2: 'rgb(var(--color-bg-2) / <alpha-value>)',
         accent_green: 'rgb(var(--color-green) / <alpha-value>)',
         progress_blue: 'rgb(var(--color-blue) / <alpha-value>)',
+        text1: 'rgb(var(--text-primary) / <alpha-value>)',
         text2: 'rgb(var(--text-secondary) / <alpha-value>)',
         input_gray: 'rgb(var(--input-gray) / <alpha-value> )'
       },

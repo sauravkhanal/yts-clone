@@ -28,7 +28,7 @@ export default function MovieSection({title, sort_by, limit = 8, bgColor}: IMovi
     return (
         <section className={`flex flex-col items-center py-10 bg-bgColor1 ${bgColor}`}>
             <span className="flex justify-between w-4/5 pb-10">
-                <p className=" font-bold text-white  ">{title}</p>
+                <p className=" font-bold text-text1  ">{title}</p>
                 <Link to="/browse-movies" className="text-text2">Browse all</Link>
             </span>
             {/* latest movies */}

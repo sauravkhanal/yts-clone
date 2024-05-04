@@ -11,13 +11,13 @@ export default function QuickSearchResult({ details, className }: { details?: Mo
     function QuickSearchItemCard(detail: Movie) {
         return (
             <div
-                className="flex gap-3 p-3  bg-bgColor2 hover:bg-bgColor1  border border-t-0 border-white border-opacity-10 cursor-pointer"
+                className="flex gap-3 p-3  bg-bgColor2 hover:bg-bgColor1  border border-t-0 border-text1 border-opacity-10 cursor-pointer"
                 key={detail.id.toString()}
                 onClick={() => handleClick(detail.id)}
             >
                 <img src={detail.medium_cover_image} alt="cover image" className="h-16" />
                 <div className="flex flex-col gap-3">
-                    <p className="text-white font-semibold text-sm">{detail.title.slice(0, 35)}</p>
+                    <p className="text-text1 font-semibold text-sm">{detail.title.slice(0, 35)}</p>
                     <p className="text-text2 text-xs">{detail.year}</p>
                 </div>
             </div>

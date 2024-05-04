@@ -24,16 +24,16 @@ export default function ThemeToggle() {
     const theme = localStorage.getItem("theme");
     const isDarkTheme = theme === "dark";
     const icon = isDarkTheme ?
-        <div className="h-full w-full bg-white flex justify-center items-center">
+        <div className="h-full w-full bg-text1 flex justify-center items-center">
 
             <IoMdSunny className="text-black group-hover:scale-125 transition " />
         </div>
         :
         <div className="h-full w-full bg-black flex justify-center items-center">
-            <FaMoon className="text-white group-hover:scale-125 transition" />;
+            <FaMoon className="text-text1 group-hover:scale-125 transition" />;
         </div>
     return (
-        <button className={` overflow-hidden group rounded-md bg-${isDarkTheme ? "white" : "black"}  transition-all duration-300 opacity-80 hover:opacity-100 h-6 w-6 md:h-8 md:w-12 lg:w-14`} onClick={handleClick}>
+        <button className={` overflow-hidden group rounded-md bg-${isDarkTheme ? "text1" : "black"}  transition-all duration-300 opacity-80 hover:opacity-100 h-6 w-6 md:h-8 md:w-12 lg:w-14`} onClick={handleClick}>
             {icon}
         </button>
     );

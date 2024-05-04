@@ -14,8 +14,8 @@ export default function Screenshots( {setVisible} : {setVisible: React.Dispatch<
             >
                 <img src={details?.medium_screenshot_image1} alt="screen shot1" className="group-hover:opacity-70 transition  object-contain" />
                 <span className="absolute group-hover:scale-110 transition pt-10">
-                    <PiPlayCircleThin className="text-6xl text-white" />
-                    <p className="font-semibold text-white text-xl">Trailer</p>
+                    <PiPlayCircleThin className="text-6xl text-text1" />
+                    <p className="font-semibold text-text1 text-xl">Trailer</p>
                 </span>
             </div>
             <img src={details?.medium_screenshot_image2} alt="screen shot2" className="hover:opacity-70 transition object-contain " />

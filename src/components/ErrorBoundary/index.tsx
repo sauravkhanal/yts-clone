@@ -33,7 +33,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         if (this.state.hasError) {
             return (
                 <div className='flex flex-col gap-10 justify-center items-center h-screen bg-bgColor1'>
-                    <p className='font-bold text-2xl text-white'>
+                    <p className='font-bold text-2xl text-text1'>
                         Something went wrong
                     </p>
                     <span className='flex gap-5 my-5'>

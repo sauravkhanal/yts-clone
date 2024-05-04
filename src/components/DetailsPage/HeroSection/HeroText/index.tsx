@@ -11,7 +11,7 @@ export default function index() {
 	return (
 		<div className="flex flex-col gap-6">
 			
-			<p className="text-[40px] text-white font-bold">{details?.title}</p>
+			<p className="text-[40px] text-text1 font-bold">{details?.title}</p>
 			<YearGenre/>
 			<AvailableIn />
 
