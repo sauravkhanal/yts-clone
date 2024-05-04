@@ -5,7 +5,7 @@ export default function YoutubeModal({ isModalVisible, setModalVisible }: { isMo
     const details = useContext(DetailsContext)
     return (
         isModalVisible &&
-        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex justify-center items-center z-10 " 
+        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex justify-center items-center z-10" 
         onClick={() => setModalVisible(false)} 
         >
             <div className="flex flex-col">
