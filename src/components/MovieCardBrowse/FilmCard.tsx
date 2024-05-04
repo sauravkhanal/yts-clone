@@ -24,7 +24,7 @@ export default function FilmCard(details: Movie) {
 
                 {/* text */}
                 <div>
-                    <p className="text-white font-bold hover:text-text2 max-w-[170px] line-clamp-1 overflow-clip"><a href={`/details/${id}`}>{details.title ?? "Title"}</a></p>
+                    <p className="text-white font-bold hover:text-text2 max-w-[170px] line-clamp-1 overflow-clip"><a href={`/details/${details.id}`}>{details.title ?? "Title"}</a></p>
                     <p className="text-text2 text-[13.6px] ">{details.year ?? "Year"}</p>
                 </div>
 
