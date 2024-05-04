@@ -26,7 +26,7 @@ export default function HeroImageButton(): JSX.Element {
 					Download
 				</a>
 			</Button>
-			<Button className="bg-[#0aad9e] py-2">Watch Now</Button>
+			<Button className="bg-teal-500 py-2">Watch Now</Button>
 		</div>
 	);
 }
