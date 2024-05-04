@@ -4,7 +4,7 @@ import { DetailsContext } from "../.."
 export default function YearGenre() {
     const details = useContext(DetailsContext)
     return (
-        <>
+        <div >
             <p className="text-xl text-white font-bold ">{details?.year}</p>
             <span className="text-white flex gap-2 flex-wrap text-xl font-bold">
                 {
@@ -13,6 +13,6 @@ export default function YearGenre() {
                     details?.genres?.map((genre, index) => <p>{genre}{((details.genres.length - 1) !== (index)) ? " /" : ""}</p>)
                 }
             </span>
-        </>
+        </div>
     )
 }
