@@ -10,16 +10,21 @@
 		--color-bg-2: 23 23 23; */
 		--color-green: 106 192 62;
 		--color-blue: 0 117 255;
-		--text-primary: 255 255 255;
-        --text-secondary: 145 145 145;
-		--input-gray: 40 40 40;
 	}
     :root[theme = "dark"] {
+		--text-secondary: 145 145 145;
+		--input-gray: 40 40 40;
+		--text-primary: 255 255 255;
 		--color-bg-1: 29 29 29;
 		--color-bg-2: 23 23 23;
+		--border-color1: 255 255 255;
     }
     :root[theme = "light"] {
-		--color-bg-1: 189 186 177;
-		--color-bg-2: 189 186 177;
+		--input-gray: 255 255 255;
+		--text-primary: 45 45 45;
+		--text-secondary: 127 127 127;
+		--color-bg-1: 220 220 220;
+		--color-bg-2: 200 200 200;
+		--border-color1: 100 100 100 ;
     }
 }

@@ -7,7 +7,7 @@ export default function FilmCard(details: Movie) {
             <div>
 
                 {/* image */}
-                <div className="border-[5px] border-text1 rounded-sm w-[180px] h-[265px] 
+                <div className="border-[5px] border-border1 rounded-sm w-[180px] h-[265px] 
                             bg-popcorn bg-cover bg-center
                             transition-colors duration-200
                             hover:border-accent_green

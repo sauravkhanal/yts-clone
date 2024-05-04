@@ -11,7 +11,7 @@ export default function QuickSearchResult({ details, className }: { details?: Mo
     function QuickSearchItemCard(detail: Movie) {
         return (
             <div
-                className="flex gap-3 p-3  bg-bgColor2 hover:bg-bgColor1  border border-t-0 border-text1 border-opacity-10 cursor-pointer"
+                className="flex gap-3 p-3  bg-bgColor2 hover:bg-bgColor1  border border-t-0 border-border1 border-opacity-10 cursor-pointer"
                 key={detail.id.toString()}
                 onClick={() => handleClick(detail.id)}
             >

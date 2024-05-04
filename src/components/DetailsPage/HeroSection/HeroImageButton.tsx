@@ -15,7 +15,7 @@ export default function HeroImageButton(): JSX.Element {
 			<img
 				src={details?.large_cover_image}
 				alt={details?.title}
-				className="border-[5px] border-text1 rounded sm"
+				className="border-[5px] border-border1 rounded sm"
 			/>
 			<Button className="py-2"> 
 				<a

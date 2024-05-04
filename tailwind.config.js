@@ -13,7 +13,9 @@ module.exports = {
         progress_blue: 'rgb(var(--color-blue) / <alpha-value>)',
         text1: 'rgb(var(--text-primary) / <alpha-value>)',
         text2: 'rgb(var(--text-secondary) / <alpha-value>)',
-        input_gray: 'rgb(var(--input-gray) / <alpha-value> )'
+        input_gray: 'rgb(var(--input-gray) / <alpha-value> )',
+        border1: 'rgba(var(--border-color1) / <alpha-value>)',
+        // border2: 'rgb(var(--text-secondary) / <alpha-value>)',
       },
       fontFamily: {
         'arimo': ["Arimo", "sans-serif"]

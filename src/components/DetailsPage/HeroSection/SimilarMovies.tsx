@@ -36,7 +36,7 @@ export default function SimilarMovies({ className }: IClassName) {
                                 <img
                                     src={value.img}
                                     key={value.id.toString()}
-                                    className="border-4 border-text1 hover:border-accent_green rounded-sm transition w-28"
+                                    className="border-4 border-border1 hover:border-accent_green rounded-sm transition w-28"
                                     onClick={() => handleClick(value.id)}
                                 />
                             </Link>

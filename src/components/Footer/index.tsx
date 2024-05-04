@@ -18,7 +18,7 @@ export default function Footer() {
 				<li className="hover:text-text1 transition"><a href="#">YIFY Status</a></li>
 				<li className="hover:text-text1 transition"><a href="#">YTS Proxies</a></li>
 				<li className="hover:text-text1 transition"><a href="#">YTS Proxies (TOR)</a></li>
-				<li className="bg-black hover:bg-bgColor1 rounded-full text-text1 px-2 py-1 transition"><a href="#">X Follow @twitter</a></li>
+				<li className="bg-text2 hover:bg-bgColor1 rounded-full text-text1 px-2 py-1 transition"><a href="#">X Follow @twitter</a></li>
 			</ul>
 			<p className="text-text1">
 				By using this site you agree to and accept our <a href="" className="text-text2">User Agreement</a>, which can be read <a href="" className="text-text2">here.</a>
