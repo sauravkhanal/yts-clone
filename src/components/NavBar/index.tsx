@@ -2,7 +2,7 @@ import Links from "./Links";
 import LoginRegister from "./LoginRegister";
 import Logo from "./Logo";
 import LogoText from "./LogoText";
-import SearchBox from "./SearchBox";
+import QuickSearchBox from "./QuickSearch";
 import SmallScreenLinkIcons from "./SmallScreenLinkIcons";
 import ThemeToggle from "./ThemeToggle";
 
@@ -20,14 +20,12 @@ export default function NavBar() {
                 <LogoText />
             </span>
             <span className="flex items-center gap-5">
-                <SearchBox />
+                <QuickSearchBox/>
                 <Links />
                 <LoginRegister />
                 <SmallScreenLinkIcons />
             <ThemeToggle/>
             </span>
-            {/* search field */}
-
 
         </nav>
     )
