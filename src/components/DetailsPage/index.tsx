@@ -5,6 +5,7 @@ import { getMovieDetail } from "../../api";
 import HeroSection from "./HeroSection";
 import Screenshots from "./Screenshots";
 import YoutubeModal from "./YoutubeModal";
+import SummaryAndCast from "./SummaryAndCast";
 
 
 export const DetailsContext = createContext<MovieDetail | undefined>(undefined);
@@ -38,7 +39,7 @@ export default function DetailsPage() {
 		}
 		fetchData();
 
-		return ()=> clearTimeout(timer)
+		return () => clearTimeout(timer)
 	}, [id]);
 
 
@@ -67,6 +68,7 @@ export default function DetailsPage() {
 					</div>
 				</div>
 				<Screenshots setVisible={setYtModalVisible} />
+				<SummaryAndCast/>
 			</div>
 
 		</DetailsContext.Provider>
