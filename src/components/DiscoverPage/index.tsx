@@ -11,6 +11,7 @@ export default function DiscoverPage(): JSX.Element {
     const [data, setData] = useState<Movie[]>([]);
     const [page, setPage] = useState<number>(1);
     const [loading, setLoading] = useState<boolean>(false)
+    const [error, setError] = useState<{ message: string } | null>(null)
 
     function increasePage(): void {
         setPage(page => page + 1)
@@ -23,13 +24,23 @@ export default function DiscoverPage(): JSX.Element {
      */
     async function fetchData(pageNumber: number): Promise<void> {
         setLoading(true)
-        const params: MovieQuery = {
-            limit: 20,
-            page: pageNumber
-        };
-        const response: AxiosResponse<Root> = await getAxios.get("/list_movies.json", { params });
-        setData(prev => ([...prev, ...response.data.data.movies]));
-        setLoading(false)
+        setError(null)
+        try {
+
+            const params: MovieQuery = {
+                limit: 20,
+                page: pageNumber
+            };
+            const response: AxiosResponse<Root> = await getAxios.get("/list_movies.json", { params , timeout: 5000});
+            setData(prev => ([...prev, ...response.data.data.movies]));
+
+        } catch (error: any) {
+            console.log(error.message)
+            setError(error ?? {message:"An error occurred"})
+
+        } finally {
+            setLoading(false)
+        }
     }
 
 
@@ -80,6 +91,7 @@ export default function DiscoverPage(): JSX.Element {
                 <MovieCards className={`grid grid-cols-4 gap-x-16 gap-y-4 bg-bgColor1 `} data={data} />
             </section>
             {loading && <span className="m-5 w-8"><LoadingSVG /></span>}
+            {error && <p className="m-5 text-2xl text-text1">{error.message}</p>}
         </div>
 
     )
